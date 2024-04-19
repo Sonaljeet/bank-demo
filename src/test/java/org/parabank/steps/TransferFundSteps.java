@@ -44,7 +44,7 @@ public class TransferFundSteps {
     public void verifyResponseMessageForTransferFund(int amount) {
         ExtentCucumberAdapter.getCurrentStep().log(Status.INFO, "**INFO: Verifying if the response message for transfer fund is as expected or not.");
         try {
-            assertEquals("Response from after hitting transfer fund api", "Successfully transferred $" + String.valueOf(amount) + " from account #" + readJSONFile(filename, "$.account.fromAccountId") + " to account #" + readJSONFile(filename, "$.account.toAccountId"), response.getBody().asString());
+            assertEquals("Response from after hitting transfer fund api", "Successfully transferred $" + amount + " from account #" + readJSONFile(filename, "$.account.fromAccountId") + " to account #" + readJSONFile(filename, "$.account.toAccountId"), response.getBody().asString());
             ExtentCucumberAdapter.getCurrentStep().log(Status.PASS, "Response from transfer fund api is as expected: " + response.getBody().asString());
         } catch (AssertionError | IOException e) {
             ExtentCucumberAdapter.getCurrentStep().log(Status.FAIL, "Response from transfer fund api is not as expected: " + response.getBody().asString());
@@ -68,7 +68,7 @@ public class TransferFundSteps {
             ExtentCucumberAdapter.getCurrentStep().log(Status.PASS, "Transferred amount- " + amount + " is successfully credited to the account.");
         } catch (AssertionError | IOException e) {
             ExtentCucumberAdapter.getCurrentStep().log(Status.FAIL, "Transferred amount- " + amount + " is not credited to the account.");
-            ExtentCucumberAdapter.getCurrentStep().log(Status.INFO, "**INOF: Something went wrong while transferring amount. For more details, please refer below response.");
+            ExtentCucumberAdapter.getCurrentStep().log(Status.INFO, "**INFO: Something went wrong while transferring amount. For more details, please refer below response.");
             ExtentCucumberAdapter.getCurrentStep().log(Status.FAIL, response.getBody().prettyPrint());
         }
     }
