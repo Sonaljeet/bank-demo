@@ -1,0 +1,11 @@
+{
+  "uri": {
+    "base": "https://parabank.parasoft.com/parabank/services/bank",
+    "trasfer-funds": "/transfer?fromAccountId={fromAccountId}&toAccountId={toAccountId}&amount={amount}",
+    "transactions": "/accounts/{accountID}/transactions"
+  },
+  "account": {
+    "fromAccountId": "13566",
+    "toAccountId": "13566"
+  }
+}
