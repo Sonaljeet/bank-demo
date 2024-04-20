@@ -6,7 +6,7 @@
 
 * JDK-17 (recommended) - [Link to download](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
 * IDE - Any Java IDE
-* Apache-Maven-3.8.3 - [Link to download](https://maven.apache.org/download.cgi)
+* Apache-Maven-3.9.6 - [Link to download](https://maven.apache.org/download.cgi)
 * GitBash - [Link to download](https://git-scm.com/downloads)
 
 ### Steps to run at your system:
